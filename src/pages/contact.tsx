@@ -149,9 +149,7 @@ export default function Contact() {
                  <div className="lg:col-span-8">
                     <div className="relative bg-white/5 p-12 lg:p-20 border border-white/5 group overflow-hidden">
                        {/* Subtle Background Pattern */}
-                       <div className="absolute inset-0 opacity-[0.03] group-hover:opacity-[0.05] transition-opacity pointer-events-none" 
-                            style={{ backgroundImage: 'radial-gradient(circle at 10px 10px, white 1px, transparent 0)', backgroundSize: '30px 30px' }} 
-                       />
+                       <div className="absolute inset-0 opacity-[0.03] group-hover:opacity-[0.05] transition-opacity pointer-events-none bg-[radial-gradient(circle_at_10px_10px,white_1px,transparent_0)] bg-[size:30px_30px]" />
 
                        <form className="relative z-10 flex flex-col space-y-12" onSubmit={handleSubmit}>
                           <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
@@ -196,6 +194,8 @@ export default function Contact() {
                                 <select 
                                    className="w-full bg-transparent border-b border-white/10 py-4 text-white text-xl font-light focus:outline-none focus:border-[#cc4e00] transition-all appearance-none cursor-pointer"
                                    value={formData.subject}
+                                   title="Inquiry Subject"
+                                   aria-label="Select your inquiry subject"
                                    onChange={(e) => setFormData({...formData, subject: e.target.value})}
                                 >
                                    <option className="bg-[#010b2b]" value="Operational Overhaul">Operational Overhaul</option>

@@ -1,4 +1,4 @@
-﻿import Head from "next/head";
+import Head from "next/head";
 import React from "react";
 import { motion } from "framer-motion";
 import { Navbar } from "@/components/layout/Navbar";
@@ -165,9 +165,7 @@ export default function Services() {
                   className="group relative bg-[#010b2b] p-12 flex flex-col min-h-[450px] transition-all duration-700 hover:bg-[#010b2b]/50 overflow-hidden"
                 >
                   {/* Hover Background Patterns */}
-                  <div className="absolute inset-0 opacity-0 group-hover:opacity-5 transition-opacity duration-700 pointer-events-none" 
-                       style={{ backgroundImage: 'radial-gradient(circle at 1px 1px, #cc4e00 1px, transparent 0)', backgroundSize: '24px 24px' }} 
-                  />
+                  <div className="absolute inset-0 opacity-0 group-hover:opacity-5 transition-opacity duration-700 pointer-events-none bg-[radial-gradient(circle_at_1px_1px,#cc4e00_1px,transparent_0)] bg-[size:24px_24px]" />
 
                   {/* Top-Right Index */}
                   <div className="absolute top-12 right-12">

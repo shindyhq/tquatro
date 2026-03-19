@@ -197,10 +197,8 @@ export default function Blog({ posts }: { posts: any[] }) {
 
           {/* Newsletter / CTA Section */}
           <div className="mt-48 py-24 px-12 md:px-24 bg-[#cc4e00] relative overflow-hidden group">
-            {/* Background Texture */}
-             <div className="absolute inset-0 opacity-10 pointer-events-none" 
-                  style={{ backgroundImage: 'linear-gradient(45deg, #fff 1px, transparent 1px)', backgroundSize: '40px 40px' }} 
-             />
+             {/* Background Texture */}
+              <div className="absolute inset-0 opacity-10 pointer-events-none bg-[linear-gradient(45deg,#fff_1px,transparent_1px)] bg-[size:40px_40px]" />
              
              <div className="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
                 <div className="space-y-6">

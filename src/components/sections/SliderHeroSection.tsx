@@ -54,10 +54,10 @@ const SLIDE_DURATION = 8000;
 // Animation Variants
 const textContainerVariants: Variants = {
   hidden: { opacity: 0 },
-  visible: {
+  visible: ({ isFirstRender }: { isFirstRender: boolean }) => ({
     opacity: 1,
-    transition: { staggerChildren: 0.1, delayChildren: 0.5 }
-  },
+    transition: { staggerChildren: 0.1, delayChildren: isFirstRender ? 0 : 0.4 }
+  }),
   exit: {
     opacity: 0,
     transition: { staggerChildren: 0.05, staggerDirection: -1 }
@@ -65,19 +65,16 @@ const textContainerVariants: Variants = {
 };
 
 const wordVariants: Variants = {
-  hidden: { y: '100%', rotateX: 45, opacity: 0, filter: 'blur(10px)' },
+  hidden: { y: '40%', opacity: 0 },
   visible: {
     y: 0,
-    rotateX: 0,
     opacity: 1,
-    filter: 'blur(0px)',
-    transition: { duration: 1, ease: [0.16, 1, 0.3, 1] }
+    transition: { duration: 0.8, ease: [0.16, 1, 0.3, 1] }
   },
   exit: {
-    y: '-100%',
+    y: '-20%',
     opacity: 0,
-    filter: 'blur(10px)',
-    transition: { duration: 0.5, ease: "easeIn" }
+    transition: { duration: 0.4, ease: "easeIn" }
   }
 };
 
@@ -92,26 +89,28 @@ const fadeUpVariants: Variants = {
 };
 
 const backgroundVariants: Variants = {
-  enter: (direction: number) => ({
-    scale: 1.2,
+  enter: ({ direction }: { direction: number }) => ({
+    scale: 1.1,
     opacity: 0,
-    x: direction > 0 ? '10%' : '-10%',
+    x: direction > 0 ? '5%' : '-5%',
   }),
-  center: {
+  center: ({ isFirstRender }: { isFirstRender: boolean }) => ({
     scale: 1,
     opacity: 1,
     x: 0,
-    transition: {
-      scale: { duration: 1.5, ease: [0.16, 1, 0.3, 1] },
-      opacity: { duration: 1 },
-      x: { duration: 1.5, ease: [0.16, 1, 0.3, 1] }
-    }
-  },
-  exit: (direction: number) => ({
-    scale: 1.1,
+    transition: isFirstRender 
+      ? { duration: 0 } 
+      : {
+          scale: { duration: 1.2, ease: [0.16, 1, 0.3, 1] },
+          opacity: { duration: 0.8 },
+          x: { duration: 1.2, ease: [0.16, 1, 0.3, 1] }
+        }
+  }),
+  exit: ({ direction }: { direction: number }) => ({
+    scale: 1.05,
     opacity: 0,
-    x: direction < 0 ? '10%' : '-10%',
-    transition: { duration: 1 }
+    x: direction < 0 ? '5%' : '-5%',
+    transition: { duration: 0.8 }
   })
 };
 
@@ -127,7 +126,12 @@ const patternVariants: Variants = {
 export const SliderHeroSection = () => {
   const [page, setPage] = useState([0, 0]);
   const [isPaused, setIsPaused] = useState(false);
+  const isFirstRender = useRef(true);
   const containerRef = useRef<HTMLDivElement>(null);
+  
+  useEffect(() => {
+    isFirstRender.current = false;
+  }, []);
   
   const slideIndex = Math.abs(page[0] % slides.length);
   const currentSlide = slides[slideIndex];
@@ -160,23 +164,25 @@ export const SliderHeroSection = () => {
         <AnimatePresence initial={false} custom={page[1]} mode="popLayout">
           <motion.div
             key={page[0]}
-            custom={page[1]}
+            custom={{ direction: page[1], isFirstRender: isFirstRender.current }}
             variants={backgroundVariants}
             initial="enter"
             animate="center"
             exit="exit"
             className="absolute inset-0 w-full h-full"
           >
-            {/* Visual Overlays */}
-            <div className="absolute inset-0 bg-gradient-to-r from-[#010b2b] via-[#010b2b]/80 to-transparent z-10" />
-            <div className="absolute inset-0 bg-[#010b2b]/30 mix-blend-multiply z-10" />
+            {/* Visual Overlays for consistent branding */}
+            <div className="absolute inset-0 bg-gradient-to-r from-[#010b2b] via-[#010b2b]/95 to-transparent z-10" />
+            <div className="absolute inset-0 bg-[#010b2b]/40 mix-blend-multiply z-10" />
             
             <Image 
-              src={currentSlide.image} 
-              alt="Slide" 
+              src={currentSlide.image.split('?')[0]} // Strip external params to let Next.js handle it
+              alt={`${currentSlide.line1} ${currentSlide.line2}`} 
               fill
               priority
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 100vw, 100vw"
               className="object-cover grayscale brightness-75"
+              quality={90}
             />
           </motion.div>
         </AnimatePresence>
@@ -209,6 +215,7 @@ export const SliderHeroSection = () => {
               <motion.div
                 key={slideIndex}
                 variants={textContainerVariants}
+                custom={{ isFirstRender: isFirstRender.current }}
                 initial="hidden"
                 animate="visible"
                 exit="exit"

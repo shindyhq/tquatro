@@ -43,10 +43,11 @@ export const Navbar = () => {
           <Link href="/" className="group flex items-center gap-6">
             <div className="relative w-16 h-16 transition-transform duration-500 group-hover:scale-105">
               <Image 
-                src="/logo-original.png" 
+                src="/logo-512.webp" 
                 alt="T-QUATRO Logo" 
                 fill 
                 priority
+                sizes="(max-width: 768px) 64px, 64px"
                 className="object-contain"
               />
             </div>

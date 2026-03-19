@@ -1,4 +1,4 @@
-﻿import Head from "next/head";
+import Head from "next/head";
 import React from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Navbar } from "@/components/layout/Navbar";
@@ -92,10 +92,8 @@ export default function Industries() {
         
         {/* Editorial Sub-Hero */}
         <section className="relative pt-48 pb-32 overflow-hidden">
-          {/* Subtle Dynamic Grid Pattern */}
-          <div className="absolute inset-0 opacity-5 pointer-events-none" 
-               style={{ backgroundImage: 'radial-gradient(circle at 1px 1px, #cc4e00 1px, transparent 0)', backgroundSize: '40px 40px' }} 
-          />
+           {/* Subtle Dynamic Grid Pattern */}
+          <div className="absolute inset-0 opacity-5 pointer-events-none bg-[radial-gradient(circle_at_1px_1px,#cc4e00_1px,transparent_0)] bg-[size:40px_40px]" />
           
           <Container>
             <div className="relative z-10 flex flex-col space-y-12">

@@ -52,9 +52,10 @@ export const Footer = () => {
                 <Link href="/" className="group flex items-center gap-6">
                   <div className="relative w-16 h-16 transition-transform duration-500 group-hover:scale-110">
                     <Image 
-                      src="/logo-original.png" 
+                      src="/logo-512.webp" 
                       alt="T-QUATRO Logo" 
                       fill 
+                      sizes="(max-width: 768px) 64px, 64px"
                       className="object-contain"
                     />
                   </div>
@@ -141,9 +142,9 @@ export const Footer = () => {
           <div className="pt-16 border-t border-white/5 flex flex-col md:flex-row justify-between items-start md:items-end gap-12">
             <div className="space-y-6">
               <div className="flex space-x-6">
-                <a href="#" className="p-3 bg-white/5 hover:bg-[#cc4e00]/10 hover:text-[#cc4e00] transition-all rounded-lg"><Linkedin size={20} /></a>
-                <a href="#" className="p-3 bg-white/5 hover:bg-[#cc4e00]/10 hover:text-[#cc4e00] transition-all rounded-lg"><Twitter size={20} /></a>
-                <a href="#" className="p-3 bg-white/5 hover:bg-[#cc4e00]/10 hover:text-[#cc4e00] transition-all rounded-lg"><Instagram size={20} /></a>
+                <a href="#" title="LinkedIn" aria-label="LinkedIn" className="p-3 bg-white/5 hover:bg-[#cc4e00]/10 hover:text-[#cc4e00] transition-all rounded-lg"><Linkedin size={20} /></a>
+                <a href="#" title="Twitter / X" aria-label="Twitter / X" className="p-3 bg-white/5 hover:bg-[#cc4e00]/10 hover:text-[#cc4e00] transition-all rounded-lg"><Twitter size={20} /></a>
+                <a href="#" title="Instagram" aria-label="Instagram" className="p-3 bg-white/5 hover:bg-[#cc4e00]/10 hover:text-[#cc4e00] transition-all rounded-lg"><Instagram size={20} /></a>
               </div>
               <div className="max-w-2xl">
                  <p className="text-[10px] text-white/20 uppercase tracking-[0.2em] leading-loose max-w-lg">

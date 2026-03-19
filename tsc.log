@@ -1,5 +1,0 @@
-src/components/ui/Heading.tsx(11,38): error TS2503: Cannot find namespace 'JSX'.
-src/components/ui/Heading.tsx(14,8): error TS2604: JSX element type 'Tag' does not have any construct or call signatures.
-src/components/ui/Heading.tsx(14,8): error TS2786: 'Tag' cannot be used as a JSX component.
-  Its type 'string | number | symbol' is not a valid JSX element type.
-    Type 'number' is not assignable to type 'ElementType'.

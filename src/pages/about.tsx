@@ -154,9 +154,7 @@ export default function About() {
         {/* Closing Identity Strip */}
         <section className="py-48 border-t border-white/5 relative overflow-hidden bg-[#010b2b]">
            {/* Background Cross Pattern */}
-           <div className="absolute inset-0 opacity-[0.02] pointer-events-none" 
-                style={{ backgroundImage: 'linear-gradient(white 1px, transparent 1px), linear-gradient(90deg, white 1px, transparent 1px)', backgroundSize: '100px 100px' }} 
-           />
+           <div className="absolute inset-0 opacity-[0.02] pointer-events-none bg-[linear-gradient(white_1px,transparent_1px),linear-gradient(90deg,white_1px,transparent_1px)] bg-[size:100px_100px]" />
            
            <Container>
               <div className="flex flex-col items-center text-center space-y-12">
