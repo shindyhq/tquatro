@@ -109,9 +109,9 @@ export default function Contact() {
                              <MapPin className="text-[#cc4e00] w-5 h-5 group-hover:scale-125 transition-transform" />
                              <span className="text-white font-black uppercase tracking-[0.3em] text-[10px]">Headquarters</span>
                           </div>
-                          <p className="text-white text-3xl font-black uppercase tracking-tighter group-hover:text-[#cc4e00] transition-colors leading-tight">
-                             DALLAS, <br />TEXAS
-                          </p>
+                           <p className="text-white text-3xl font-black uppercase tracking-tighter group-hover:text-[#cc4e00] transition-colors leading-tight">
+                              UNCOMPROMISING <br />TEXAS
+                           </p>
                        </div>
 
                        <div className="group space-y-4 cursor-pointer">

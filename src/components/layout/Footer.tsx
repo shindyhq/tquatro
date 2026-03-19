@@ -83,7 +83,7 @@ export const Footer = () => {
                   </a>
                   <div className="flex items-center space-x-4 text-white/40 pt-4">
                     <MapPin size={18} className="text-[#cc4e00]" />
-                    <span className="text-sm uppercase tracking-widest font-bold">Dallas, Texas - Nationally Focused</span>
+                    <span className="text-sm uppercase tracking-widest font-bold">Texas - Nationally Focused</span>
                   </div>
                 </div>
               </div>
@@ -147,7 +147,7 @@ export const Footer = () => {
               </div>
               <div className="max-w-2xl">
                  <p className="text-[10px] text-white/20 uppercase tracking-[0.2em] leading-loose max-w-lg">
-                    © {currentYear} T-QUATRO LLC. ALL RIGHTS RESERVED. OPERATED FROM DALLAS, TEXAS. RESULTS VARY BY BUSINESS SIZE AND INDUSTRY CONDITIONS. PREPAREDNESS IS THE ONLY CONSTANT.
+                    © {currentYear} T-QUATRO LLC. ALL RIGHTS RESERVED. OPERATED FROM TEXAS. RESULTS VARY BY BUSINESS SIZE AND INDUSTRY CONDITIONS. PREPAREDNESS IS THE ONLY CONSTANT.
                  </p>
               </div>
             </div>

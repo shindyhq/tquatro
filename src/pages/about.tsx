@@ -1,4 +1,4 @@
-﻿import Head from "next/head";
+import Head from "next/head";
 import React from "react";
 import { motion } from "framer-motion";
 import { Navbar } from "@/components/layout/Navbar";
@@ -108,7 +108,7 @@ export default function About() {
                     className="object-cover grayscale group-hover:grayscale-0 transition-all duration-1000 scale-105 group-hover:scale-100 opacity-60 group-hover:opacity-100"
                   />
                   <div className="absolute inset-x-0 bottom-0 p-12 bg-gradient-to-t from-[#010b2b] to-transparent">
-                     <span className="text-white font-black uppercase tracking-[0.3em] text-xs opacity-50 block mb-2">Based in Dallas, TX</span>
+                     <span className="text-white font-black uppercase tracking-[0.3em] text-xs opacity-50 block mb-2">Based in Texas</span>
                      <h3 className="text-white text-3xl font-black uppercase tracking-tighter">Serving National Roster</h3>
                   </div>
                </div>
