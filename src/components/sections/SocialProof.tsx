@@ -35,7 +35,7 @@ export const SocialProof = () => {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-24">
           
           {/* Left: Section Header */}
-          <div className="lg:col-span-5">
+          <div className="lg:col-span-4">
             <motion.div
               initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -59,8 +59,8 @@ export const SocialProof = () => {
             </motion.div>
           </div>
 
-          {/* Right: Testimonial List */}
-          <div className="lg:col-span-7 space-y-px bg-white/10 border border-white/10">
+          {/* Right: Testimonial Grid */}
+          <div className="lg:col-span-8 grid grid-cols-1 md:grid-cols-2 gap-px bg-white/10 border border-white/10 overflow-hidden">
             {testimonials.map((t, i) => (
               <motion.div
                 key={i}
@@ -68,28 +68,28 @@ export const SocialProof = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.8, delay: i * 0.1 }}
-                className="bg-[#010b2b] p-12 md:p-16 relative group transition-all duration-500 hover:bg-white/[0.02]"
+                className="bg-[#010b2b] p-10 md:p-14 relative group transition-all duration-500 hover:bg-white/[0.02] flex flex-col justify-between h-full"
               >
-                {/* Visual Pull-Quote Motif */}
-                <span className="absolute top-8 left-8 text-8xl font-black text-[#cc4e00]/5 select-none pointer-events-none group-hover:text-[#cc4e00]/10 transition-colors duration-500">
-                  &ldquo;
-                </span>
-
                 <div className="relative z-10 space-y-10">
-                  <Text className="text-white/80 text-xl md:text-2xl font-light italic leading-relaxed tracking-tight">
+                  {/* Visual Pull-Quote Motif */}
+                  <span className="block text-6xl font-black text-[#cc4e00]/10 select-none pointer-events-none group-hover:text-[#cc4e00]/20 transition-colors duration-500">
+                    &ldquo;
+                  </span>
+
+                  <Text className="text-white/80 text-lg md:text-xl font-light leading-relaxed tracking-tight">
                     {t.quote}
                   </Text>
+                </div>
                   
-                  <div className="flex items-center space-x-6 pt-6 border-t border-white/5">
-                    <div className="w-10 h-[1px] bg-[#cc4e00]" />
-                    <div className="flex flex-col">
-                      <span className="text-white font-black uppercase tracking-widest text-xs">
-                        {t.author}
-                      </span>
-                      <span className="text-[#cc4e00]/60 text-[10px] font-bold uppercase tracking-[0.2em] mt-1">
-                        {t.location}
-                      </span>
-                    </div>
+                <div className="flex items-center space-x-6 pt-10 border-t border-white/5 mt-10">
+                  <div className="w-10 h-[1px] bg-[#cc4e00]" />
+                  <div className="flex flex-col">
+                    <span className="text-white font-black uppercase tracking-widest text-[10px]">
+                      {t.author}
+                    </span>
+                    <span className="text-[#cc4e00]/60 text-[9px] font-bold uppercase tracking-[0.2em] mt-1">
+                      {t.location}
+                    </span>
                   </div>
                 </div>
               </motion.div>
