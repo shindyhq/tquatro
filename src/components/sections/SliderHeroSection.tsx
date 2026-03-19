@@ -215,19 +215,23 @@ export const SliderHeroSection = () => {
                 className="flex flex-col space-y-10"
               >
                 {/* Massive Editorial Header */}
-                <div className="flex flex-col -space-y-4 md:-space-y-6">
+                <div className="flex flex-col -space-y-4 md:-space-y-6 lg:-space-y-10">
                   <div>
                     <motion.span 
                       variants={wordVariants}
-                      className="block font-black text-[clamp(2.5rem,8.5vw,9.5rem)] leading-[0.9] tracking-tighter uppercase text-white"
+                      className="block font-black text-[clamp(2.5rem,8.5vw,9.5rem)] leading-[0.8] tracking-tighter uppercase text-white"
                     >
                       {currentSlide.line1}
                     </motion.span>
                   </div>
-                  <div>
+                  <div className="relative">
                     <motion.span 
                       variants={wordVariants}
-                      className="block font-black text-[clamp(2.5rem,8.5vw,9.5rem)] leading-[0.9] tracking-tighter uppercase text-[#cc4e00]"
+                      className="block font-black text-[clamp(2.5rem,8.5vw,9.5rem)] leading-[0.8] tracking-tighter uppercase text-[#cc4e00]"
+                      style={{ 
+                        WebkitTextStroke: '2px #cc4e00',
+                        color: 'transparent'
+                      }}
                     >
                       {currentSlide.line2}
                     </motion.span>
