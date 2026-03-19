@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
 import { Container } from '../ui/Container';
@@ -9,7 +9,7 @@ const features = [
     tag: 'Multi-Channel Commerce',
     headline: 'One strategy.\nEvery channel that matters.',
     body:
-      "Amazon, Shopify, eBay, TikTok Shop, social — the landscape is fragmented, but your operations don't have to be. We build the infrastructure that ties your marketplace presence together and keeps everything moving in one direction.",
+      "Amazon, Shopify, eBay, TikTok Shop, social - the landscape is fragmented, but your operations don't have to be. We build the infrastructure that ties your marketplace presence together and keeps everything moving in one direction.",
     points: [
       'Marketplace integrations & real-time syncing',
       'Multi-channel inventory management',
@@ -25,7 +25,7 @@ const features = [
     tag: 'Growth & Visibility',
     headline: 'Visibility that earns\nits place. Not rented.',
     body:
-      "Paid ads stop when the budget does. We build organic search strategies and content frameworks that compound over time — turning your brand into a trusted resource your customers actively seek out.",
+      "Paid ads stop when the budget does. We build organic search strategies and content frameworks that compound over time - turning your brand into a trusted resource your customers actively seek out.",
     points: [
       'Technical & on-page SEO strategy',
       'Content strategy & editorial planning',
@@ -41,7 +41,7 @@ const features = [
     tag: 'Operations & Financials',
     headline: 'Clarity beneath\nthe surface.',
     body:
-      "Most business problems trace back to two things: unclear finances and broken operations. We clean both up — building the financial visibility and operational structure that lets you make faster, smarter decisions.",
+      "Most business problems trace back to two things: unclear finances and broken operations. We clean both up - building the financial visibility and operational structure that lets you make faster, smarter decisions.",
     points: [
       'Clean, current, decision-ready bookkeeping',
       'Supply chain & product sourcing optimization',

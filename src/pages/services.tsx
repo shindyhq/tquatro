@@ -1,4 +1,4 @@
-import Head from "next/head";
+﻿import Head from "next/head";
 import React from "react";
 import { motion } from "framer-motion";
 import { Navbar } from "@/components/layout/Navbar";

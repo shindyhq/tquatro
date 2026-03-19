@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
@@ -83,7 +83,7 @@ export const Footer = () => {
                   </a>
                   <div className="flex items-center space-x-4 text-white/40 pt-4">
                     <MapPin size={18} className="text-[#cc4e00]" />
-                    <span className="text-sm uppercase tracking-widest font-bold">Dallas, Texas &mdash; Nationally Focused</span>
+                    <span className="text-sm uppercase tracking-widest font-bold">Dallas, Texas - Nationally Focused</span>
                   </div>
                 </div>
               </div>

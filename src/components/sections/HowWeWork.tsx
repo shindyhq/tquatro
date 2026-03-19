@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 import { motion } from 'framer-motion';
 import { Container } from '../ui/Container';
 import { Heading } from '../ui/Heading';
@@ -12,19 +12,19 @@ const steps = [
     num: '01', 
     title: 'Discovery', 
     tag: 'Tailored', 
-    desc: "We start by listening. A thorough look at your business, your goals, and the specific challenges standing between where you are and where you want to be. No assumptions, no templates — just honest assessment built around your actual situation." 
+    desc: "We start by listening. A thorough look at your business, your goals, and the specific challenges standing between where you are and where you want to be. No assumptions, no templates - just honest assessment built around your actual situation." 
   },
   { 
     num: '02', 
     title: 'Strategy', 
     tag: 'Transparency', 
-    desc: "Based on what we learn, we develop a focused plan — and we walk you through it plainly. Not a 50-page deck full of ideas, but a clear, prioritized roadmap. We'll also tell you directly what won't work and why, before resources are wasted on it." 
+    desc: "Based on what we learn, we develop a focused plan - and we walk you through it plainly. Not a 50-page deck full of ideas, but a clear, prioritized roadmap. We'll also tell you directly what won't work and why, before resources are wasted on it." 
   },
   { 
     num: '03', 
     title: 'Execution', 
     tag: 'Tenacity', 
-    desc: "This is where most consultancies stop. We don't. We stay involved through implementation — whether managing marketplace integrations, launching an SEO campaign, or restructuring your operations. We push through the difficult parts, not around them." 
+    desc: "This is where most consultancies stop. We don't. We stay involved through implementation - whether managing marketplace integrations, launching an SEO campaign, or restructuring your operations. We push through the difficult parts, not around them." 
   },
   { 
     num: '04', 
@@ -77,7 +77,7 @@ export const HowWeWork = () => {
               </Heading>
               
               <Text className="text-white/60 text-lg leading-relaxed max-w-xl font-light">
-                We believe every engagement should be clear from day one &mdash; what we&apos;re doing, why we&apos;re doing it, and what success looks like. Here&apos;s how most projects unfold:
+                We believe every engagement should be clear from day one - what we&apos;re doing, why we&apos;re doing it, and what success looks like. Here&apos;s how most projects unfold:
               </Text>
 
               <div className="pt-8">

@@ -1,4 +1,4 @@
-import Head from "next/head";
+﻿import Head from "next/head";
 import React from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Navbar } from "@/components/layout/Navbar";
@@ -45,7 +45,7 @@ const industrySectors = [
     title: "Supply Chain & Logistics",
     icon: <Truck className="w-8 h-8" />,
     image: "https://images.pexels.com/photos/4481259/pexels-photo-4481259.jpeg?auto=compress&cs=tinysrgb&w=800",
-    desc: "The invisible foundation of every great brand—restructuring supply chains for profitability and resilience.",
+    desc: "The invisible foundation of every great brand-restructuring supply chains for profitability and resilience.",
     stats: "40% Higher Margin Potential",
     focus: ["Supplier Discovery", "Landed Cost Analysis", "Q.C. Management"]
   },
@@ -55,7 +55,7 @@ const industrySectors = [
     title: "Media & Publications",
     icon: <Newspaper className="w-8 h-8" />,
     image: "https://images.pexels.com/photos/257360/pexels-photo-257360.jpeg?auto=compress&cs=tinysrgb&w=800",
-    desc: "Harnessing content as an asset—building owned audiences that convert into transactional outcomes.",
+    desc: "Harnessing content as an asset-building owned audiences that convert into transactional outcomes.",
     stats: "Authority-First Growth",
     focus: ["Editorial Operations", "Newsletter Scale", "Brand IP Support"]
   }
@@ -83,7 +83,7 @@ export default function Industries() {
     <>
       <Head>
         <title>Industries | T-QUATRO LLC</title>
-        <meta name="description" content="T-QUATRO focuses on the sectors where operations, data, and digital strategy have the most immediate impact—from DTC to Supply Chain & Logistics." />
+        <meta name="description" content="T-QUATRO focuses on the sectors where operations, data, and digital strategy have the most immediate impact-from DTC to Supply Chain & Logistics." />
       </Head>
 
       <Navbar />
@@ -226,7 +226,7 @@ export default function Industries() {
                     READY TO <br />DOMINATE?
                  </h2>
                  <p className="text-white/80 text-2xl font-light max-w-2xl leading-relaxed">
-                   More than just understanding your space—we implement the data-led systems required to win in it.
+                   More than just understanding your space-we implement the data-led systems required to win in it.
                  </p>
                  
                  <div className="flex flex-wrap items-center justify-center gap-8 pt-8">

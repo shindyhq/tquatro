@@ -1,4 +1,4 @@
-import Head from "next/head";
+﻿import Head from "next/head";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { SliderHeroSection } from "@/components/sections/SliderHeroSection";
@@ -21,7 +21,7 @@ export default function Home() {
     <>
       <Head>
         <title>T-QUATRO LLC | Online Retail Consultancy</title>
-        <meta name="description" content="T-QUATRO LLC helps businesses compete, grow, and win in the digital marketplace — through strategy, systems, and hands-on execution across every channel that matters." />
+        <meta name="description" content="T-QUATRO LLC helps businesses compete, grow, and win in the digital marketplace - through strategy, systems, and hands-on execution across every channel that matters." />
       </Head>
 
       <Navbar />
@@ -60,10 +60,10 @@ export default function Home() {
               <div className="lg:w-[60%] flex flex-col space-y-16 lg:pt-4">
                 <div className="space-y-8 max-w-2xl">
                   <Text variant="lead" className="text-foreground/90 leading-relaxed">
-                    T-QUATRO LLC was built by operators who understand what it actually takes to grow a business in today&apos;s digital landscape &mdash; not in theory, but in practice. 
+                    T-QUATRO LLC was built by operators who understand what it actually takes to grow a business in today&apos;s digital landscape - not in theory, but in practice. 
                   </Text>
                   <Text className="text-foreground/80">
-                    From Amazon storefronts to supply chain logistics, from bookkeeping to SEO, we bring the expertise and execution that most consultancies only promise. We work with brands at every stage &mdash; early-scale operators ready to expand, and established businesses looking to sharpen their edge.
+                    From Amazon storefronts to supply chain logistics, from bookkeeping to SEO, we bring the expertise and execution that most consultancies only promise. We work with brands at every stage - early-scale operators ready to expand, and established businesses looking to sharpen their edge.
                   </Text>
                 </div>
                 
@@ -128,7 +128,7 @@ export default function Home() {
 
         <CtaSection
           title="Ready to move?"
-          subtitle="Whether you're launching something new, scaling what's already working, or working through a challenge — we're straightforward to talk to, and there's no pressure. Tell us where you are and where you're trying to go. We'll tell you honestly if and how we can help."
+          subtitle="Whether you're launching something new, scaling what's already working, or working through a challenge - we're straightforward to talk to, and there's no pressure. Tell us where you are and where you're trying to go. We'll tell you honestly if and how we can help."
           primaryCta={{ label: "Start the Conversation", href: "/contact" }}
           secondaryCta={{ label: "Explore Services", href: "/services" }}
         />

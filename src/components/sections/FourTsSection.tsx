@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 import { motion } from 'framer-motion';
 import { Container } from '../ui/Container';
 import { Heading } from '../ui/Heading';
@@ -8,23 +8,23 @@ import { Section } from '../ui/Section';
 const values = [
   {
     title: "Transparency",
-    quote: "We'll tell you honestly if we're the right fit — and point you in the right direction if we're not.",
-    description: "We say what we mean — including the things that are uncomfortable to hear. If something isn't working, we'll tell you. If we're not the right fit, we'll say so. You'll never leave a conversation with us wondering where things actually stand."
+    quote: "We'll tell you honestly if we're the right fit - and point you in the right direction if we're not.",
+    description: "We say what we mean - including the things that are uncomfortable to hear. If something isn't working, we'll tell you. If we're not the right fit, we'll say so. You'll never leave a conversation with us wondering where things actually stand."
   },
   {
     title: "Transformation",
     quote: "Not incremental growth. Decisive, structural, sustainable growth.",
-    description: "We're not here to maintain the status quo. Every service we offer is built around changing the trajectory of your business — whether that's breaking through a growth ceiling, rebuilding a broken operation, or entering a new market with confidence."
+    description: "We're not here to maintain the status quo. Every service we offer is built around changing the trajectory of your business - whether that's breaking through a growth ceiling, rebuilding a broken operation, or entering a new market with confidence."
   },
   {
     title: "Tenacity",
     quote: "This is where most consultancies stop. We don't.",
-    description: "Most consultancies deliver recommendations. We deliver results — and that requires staying involved beyond the strategy session. We work through implementation, troubleshoot the unexpected, and don't walk away until the work is actually done."
+    description: "Most consultancies deliver recommendations. We deliver results - and that requires staying involved beyond the strategy session. We work through implementation, troubleshoot the unexpected, and don't walk away until the work is actually done."
   },
   {
     title: "Tailored",
-    quote: "No assumptions, no templates — just honest assessment.",
-    description: "No two businesses are the same, and we don't treat them that way. Every engagement starts with genuine discovery — understanding your specific situation, constraints, and goals before we recommend a single thing. What we build for you fits you, not a template."
+    quote: "No assumptions, no templates - just honest assessment.",
+    description: "No two businesses are the same, and we don't treat them that way. Every engagement starts with genuine discovery - understanding your specific situation, constraints, and goals before we recommend a single thing. What we build for you fits you, not a template."
   }
 ];
 
@@ -74,7 +74,7 @@ export const FourTsSection = () => {
             </Heading>
 
             <Text className="text-white/40 text-xl font-light leading-relaxed max-w-2xl border-x border-white/10 px-12">
-              What separates the consultancies worth working with isn&apos;t the length of their service list &mdash; it&apos;s how they show up.
+              What separates the consultancies worth working with isn&apos;t the length of their service list - it&apos;s how they show up.
             </Text>
           </motion.div>
 

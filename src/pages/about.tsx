@@ -1,4 +1,4 @@
-import Head from "next/head";
+﻿import Head from "next/head";
 import React from "react";
 import { motion } from "framer-motion";
 import { Navbar } from "@/components/layout/Navbar";
@@ -13,13 +13,13 @@ const philosophyItems = [
     id: "01",
     title: "Transparency",
     icon: <Users className="w-6 h-6" />,
-    desc: "We say what we mean — including things that are uncomfortable to hear. Honest information leads to better decisions."
+    desc: "We say what we mean - including things that are uncomfortable to hear. Honest information leads to better decisions."
   },
   {
     id: "02",
     title: "Transformation",
     icon: <Zap className="w-6 h-6" />,
-    desc: "Our job isn't to produce reports — it's to shift the trajectory of your business and outcomes."
+    desc: "Our job isn't to produce reports - it's to shift the trajectory of your business and outcomes."
   },
   {
     id: "03",
@@ -127,7 +127,7 @@ export default function About() {
                           In the digital marketplace, these two systems are inseparable. You cannot have a growth plan that ignores supply chain reality, and you cannot have operations that don&apos;t support the brand promise.
                         </p>
                         <p className="text-white/40 text-lg font-light leading-relaxed">
-                          We bring those worlds together. Our background is built on real-world testing—ensuring your infrastructure is as resilient as your vision.
+                          We bring those worlds together. Our background is built on real-world testing-ensuring your infrastructure is as resilient as your vision.
                         </p>
                      </div>
                   </div>

@@ -1,4 +1,4 @@
-import Head from "next/head";
+﻿import Head from "next/head";
 import React from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Navbar } from "@/components/layout/Navbar";
@@ -107,7 +107,7 @@ export default function Contact() {
                              <span className="text-white font-black uppercase tracking-[0.3em] text-[10px]">Consultation Hours</span>
                           </div>
                           <p className="text-white/40 text-sm font-light leading-relaxed">
-                             Mon — Fri: <span className="text-white/80">9:00 AM - 6:00 PM CST</span><br />
+                             Mon - Fri: <span className="text-white/80">9:00 AM - 6:00 PM CST</span><br />
                              Response Time: <span className="text-white/80">Under 12 Hours</span>
                           </p>
                        </div>

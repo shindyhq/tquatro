@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { Container } from '../ui/Container';
@@ -14,7 +14,7 @@ const services = [
   { id: '04', title: 'Product Development', desc: 'We help you move from concept to launch with research-backed validation, competitive positioning, and a go-to-market plan.' },
   { id: '05', title: 'Business Turnaround', desc: 'We step in, diagnose the root cause, and rebuild the operational foundation your business needs to get back on track.' },
   { id: '06', title: 'Bookkeeping', desc: 'Clean, current, and decision-ready financials so you always know exactly where your business stands.' },
-  { id: '07', title: 'SEO Services', desc: 'Visibility that earns its place — not rented. We build organic search strategies that compound over time.' },
+  { id: '07', title: 'SEO Services', desc: 'Visibility that earns its place - not rented. We build organic search strategies that compound over time.' },
   { id: '08', title: 'Media & Publications', desc: 'We develop content strategies and editorial frameworks that build authority and grow audiences.' },
 ];
 
@@ -58,7 +58,7 @@ export const ServicesOverview = () => {
             </Heading>
             
             <Text className="text-white/60 text-xl font-light leading-relaxed max-w-2xl">
-              Our services are modular by design and powerful in combination. Whether you need one solution or a full-stack growth system, everything we offer is built to deliver measurable outcomes &mdash; not just activity.
+              Our services are modular by design and powerful in combination. Whether you need one solution or a full-stack growth system, everything we offer is built to deliver measurable outcomes - not just activity.
             </Text>
           </div>
 

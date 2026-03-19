@@ -1,4 +1,4 @@
-import { Section } from '../ui/Section';
+﻿import { Section } from '../ui/Section';
 import { Container } from '../ui/Container';
 import { Heading } from '../ui/Heading';
 import { Text } from '../ui/Text';
@@ -24,14 +24,14 @@ const stats = [
     value: '360',
     suffix: '°',
     label: 'Integrated Approach',
-    desc: 'Strategy, execution, and optimization — not just a report and a handshake',
+    desc: 'Strategy, execution, and optimization - not just a report and a handshake',
     icon: <Target className="h-8 w-8 text-[#cc4e00]" />
   },
   {
     value: '100',
     suffix: '%',
     label: 'Operator-Led',
-    desc: 'Built by people who have actually done it — not just studied it from the outside',
+    desc: 'Built by people who have actually done it - not just studied it from the outside',
     icon: <Globe className="h-8 w-8 text-[#cc4e00]" />
   },
 ];

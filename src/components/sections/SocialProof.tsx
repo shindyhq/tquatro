@@ -1,4 +1,4 @@
-import { motion } from 'framer-motion';
+﻿import { motion } from 'framer-motion';
 import { Container } from '../ui/Container';
 import { Heading } from '../ui/Heading';
 import { Text } from '../ui/Text';
@@ -6,7 +6,7 @@ import { Text } from '../ui/Text';
 const testimonials = [
   {
     quote:
-      "Working with a team that actually understands ecommerce operations — not just the theory — made all the difference. They helped us streamline our marketplace presence and finally get our numbers in order.",
+      "Working with a team that actually understands ecommerce operations - not just the theory - made all the difference. They helped us streamline our marketplace presence and finally get our numbers in order.",
     author: 'E-commerce Brand Owner',
     location: 'Dallas, TX',
   },

@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 import { Container } from '../ui/Container';
 import { Section } from '../ui/Section';
 import { Heading } from '../ui/Heading';
@@ -35,7 +35,7 @@ export const TrustBar = () => {
               
               <div className="max-w-4xl mx-auto px-4">
                 <Heading level={2} className="text-white text-[clamp(2rem,6vw,4.5rem)] leading-[0.95] tracking-tighter uppercase font-black">
-                  The marketplace doesn&apos;t reward the biggest &mdash; 
+                  The marketplace doesn&apos;t reward the biggest - 
                   <br className="hidden md:block" />
                   <span className="text-[#cc4e00]">it rewards the most prepared.</span>
                 </Heading>
