@@ -3,6 +3,7 @@ import { Container } from '../ui/Container';
 import { Section } from '../ui/Section';
 import { Heading } from '../ui/Heading';
 import { motion } from 'framer-motion';
+import { Globe, Layers, RotateCcw, Navigation } from 'lucide-react';
 
 export const TrustBar = () => {
   return (
@@ -40,9 +41,27 @@ export const TrustBar = () => {
                 </Heading>
               </div>
 
-              {/* Visual Divider Block */}
-              <div className="flex flex-col items-center pt-12">
-                <div className="w-1 h-20 bg-gradient-to-b from-[#cc4e00] to-transparent" />
+              {/* Stats Row according to doc */}
+              <div className="grid grid-cols-1 md:grid-cols-4 gap-8 md:gap-px bg-white/5 border border-white/5 mt-20">
+                {[
+                  { label: "Industries", value: "5", icon: <Globe className="w-5 h-5" /> },
+                  { label: "Service Lines", value: "8", icon: <Layers className="w-5 h-5" /> },
+                  { label: "Approach", value: "360°", icon: <RotateCcw className="w-5 h-5" /> },
+                  { label: "Focus", value: "Nationally", icon: <Navigation className="w-5 h-5" />, sub: "Dallas-Based" },
+                ].map((stat, i) => (
+                  <div key={i} className="p-10 md:p-12 bg-[#010b2b] flex flex-col items-center space-y-4 group hover:bg-white/[0.02] transition-colors border-r border-white/5 last:border-r-0">
+                    <div className="text-[#cc4e00] opacity-40 group-hover:opacity-100 transition-opacity">
+                       {stat.icon}
+                    </div>
+                    <div className="flex flex-col items-center">
+                       <span className="text-white text-4xl md:text-5xl font-black tracking-tighter uppercase">{stat.value}</span>
+                       <span className="text-white/30 text-[10px] font-black uppercase tracking-[0.3em] mt-2 group-hover:text-white/60 transition-colors">{stat.label}</span>
+                       {stat.sub && (
+                         <span className="text-[#cc4e00]/40 text-[9px] font-bold uppercase tracking-widest mt-1">{stat.sub}</span>
+                       )}
+                    </div>
+                  </div>
+                ))}
               </div>
             </motion.div>
           </div>
