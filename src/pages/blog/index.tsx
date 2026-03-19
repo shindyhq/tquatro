@@ -4,51 +4,39 @@ import { motion } from "framer-motion";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { Container } from "@/components/ui/Container";
-import { ArrowUpRight, Calendar, User, Tag, Clock } from "lucide-react";
+import { ArrowUpRight, Tag, Clock } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
+import { getAllPosts } from "@/lib/wordpress";
 
-const blogPosts = [
-  {
-    id: 1,
-    title: "The Strategy-Execution Gap: Why Most Consultancy Advice Fails",
-    excerpt: "Success in the digital marketplace doesn't come from 50-page slide decks. It comes from the ability to turn high-level vision into warehouse-level reality.",
-    category: "Strategy",
-    author: "T-QUATRO Editorial",
-    readTime: "6 min read",
-    image: "https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg?auto=compress&cs=tinysrgb&w=800",
-    slug: "strategy-execution-gap"
-  },
-  {
-    id: 2,
-    title: "Omnichannel is Dead. Long Live Integrated Commerce.",
-    excerpt: "The line between physical and digital storefronts has dissolved. If your supply chain doesn't reflect that, you're losing margin every single day.",
-    category: "Operations",
-    author: "T-QUATRO Editorial",
-    readTime: "8 min read",
-    image: "https://images.pexels.com/photos/4483610/pexels-photo-4483610.jpeg?auto=compress&cs=tinysrgb&w=800",
-    slug: "integrated-commerce-future"
-  },
-  {
-    id: 3,
-    title: "Supply Chain Resilience: More Than Just a Buzzword",
-    excerpt: "Predictability is the new competitive advantage. How leading brands are restructuring their fulfillment to survive global marketplace volatility.",
-    category: "Supply Chain",
-    author: "T-QUATRO Editorial",
-    readTime: "5 min read",
-    image: "https://images.pexels.com/photos/6169033/pexels-photo-6169033.jpeg?auto=compress&cs=tinysrgb&w=800",
-    slug: "supply-chain-resilience"
+export async function getServerSideProps() {
+  try {
+    const posts = await getAllPosts();
+    return {
+      props: {
+        posts: posts || [],
+      },
+    };
+  } catch (error) {
+    console.error("Error fetching posts:", error);
+    return {
+      props: {
+        posts: [],
+      },
+    };
   }
-];
+}
 
-const categories = ["All", "Strategy", "Operations", "Supply Chain", "Media", "Digital"];
-
-export default function Blog() {
+export default function Blog({ posts }: { posts: any[] }) {
   const [activeCategory, setActiveCategory] = React.useState("All");
 
+  const categories = ["All", ...new Set(posts?.flatMap(post => post.categories.nodes.map((n: any) => n.name)) || [])];
+
   const filteredPosts = activeCategory === "All" 
-    ? blogPosts 
-    : blogPosts.filter(post => post.category === activeCategory);
+    ? posts 
+    : posts.filter((post: any) => 
+        post.categories.nodes.some((cat: any) => cat.name === activeCategory)
+      );
 
   return (
     <>
@@ -96,7 +84,7 @@ export default function Blog() {
 
           {/* Categories Filter */}
           <div className="flex flex-wrap gap-4 mb-20">
-            {categories.map((cat) => (
+            {categories.map((cat: any) => (
               <button
                 key={cat}
                 onClick={() => setActiveCategory(cat)}
@@ -113,59 +101,68 @@ export default function Blog() {
 
           {/* Blog Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
-            {filteredPosts.map((post, index) => (
-              <motion.article
-                key={post.id}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: index * 0.1, duration: 0.8 }}
-                className="group flex flex-col h-full bg-white/[0.02] border border-white/5 overflow-hidden hover:border-[#cc4e00]/30 transition-all duration-500"
-              >
-                {/* Image Container */}
-                <Link href={`/blog/${post.slug}`} className="relative h-72 overflow-hidden block">
-                  <Image 
-                    src={post.image} 
-                    alt={post.title}
-                    fill
-                    className="object-cover grayscale group-hover:grayscale-0 transition-all duration-1000 group-hover:scale-105"
-                  />
-                  <div className="absolute top-6 left-6">
-                    <span className="bg-[#cc4e00] text-white px-4 py-2 text-[10px] font-black uppercase tracking-widest">{post.category}</span>
-                  </div>
-                </Link>
-
-                {/* Content */}
-                <div className="p-10 flex flex-col flex-grow space-y-6">
-                  <div className="flex items-center space-x-6 text-[10px] font-black uppercase tracking-widest text-white/30">
-                    <div className="flex items-center">
-                      <Tag className="w-3 h-3 mr-2 text-[#cc4e00]" />
-                      Knowledge Share
+            {filteredPosts && filteredPosts.length > 0 ? (
+              filteredPosts.map((post, index) => (
+                <motion.article
+                  key={post.slug}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: index * 0.1, duration: 0.8 }}
+                  className="group flex flex-col h-full bg-white/[0.02] border border-white/5 overflow-hidden hover:border-[#cc4e00]/30 transition-all duration-500"
+                >
+                  {/* Image Container */}
+                  <Link href={`/blog/${post.slug}`} className="relative h-72 overflow-hidden block">
+                    <Image 
+                      src={post.featuredImage?.node?.sourceUrl || "https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg?auto=compress&cs=tinysrgb&w=800"} 
+                      alt={post.title}
+                      fill
+                      className="object-cover grayscale group-hover:grayscale-0 transition-all duration-1000 group-hover:scale-105"
+                    />
+                    <div className="absolute top-6 left-6">
+                      <span className="bg-[#cc4e00] text-white px-4 py-2 text-[10px] font-black uppercase tracking-widest">
+                        {post.categories.nodes[0]?.name || "Uncategorized"}
+                      </span>
                     </div>
-                    <div className="flex items-center">
-                      <Clock className="w-3 h-3 mr-2 text-[#cc4e00]" />
-                      {post.readTime}
-                    </div>
-                  </div>
-
-                  <Link href={`/blog/${post.slug}`}>
-                    <h3 className="text-2xl font-black uppercase tracking-tight text-white leading-tight group-hover:text-[#cc4e00] transition-colors line-clamp-2">
-                      {post.title}
-                    </h3>
                   </Link>
 
-                  <p className="text-white/40 text-sm font-light leading-relaxed line-clamp-3">
-                    {post.excerpt}
-                  </p>
+                  {/* Content */}
+                  <div className="p-10 flex flex-col flex-grow space-y-6">
+                    <div className="flex items-center space-x-6 text-[10px] font-black uppercase tracking-widest text-white/30">
+                      <div className="flex items-center">
+                        <Tag className="w-3 h-3 mr-2 text-[#cc4e00]" />
+                        Knowledge Share
+                      </div>
+                      <div className="flex items-center">
+                        <Clock className="w-3 h-3 mr-2 text-[#cc4e00]" />
+                        Evergreen
+                      </div>
+                    </div>
 
-                  <div className="pt-6 mt-auto">
-                    <Link href={`/blog/${post.slug}`} className="inline-flex items-center space-x-4 text-[#cc4e00] group/link">
-                      <span className="text-[10px] font-black uppercase tracking-[0.3em] border-b border-[#cc4e00]/30 group-hover/link:border-[#cc4e00] transition-colors">Read Article</span>
-                      <ArrowUpRight className="w-4 h-4 group-hover/link:translate-x-1 group-hover/link:-translate-y-1 transition-transform" />
+                    <Link href={`/blog/${post.slug}`}>
+                      <h3 className="text-2xl font-black uppercase tracking-tight text-white leading-tight group-hover:text-[#cc4e00] transition-colors line-clamp-2">
+                        {post.title}
+                      </h3>
                     </Link>
+
+                    <div 
+                      className="text-white/40 text-sm font-light leading-relaxed line-clamp-3"
+                      dangerouslySetInnerHTML={{ __html: post.excerpt }}
+                    />
+
+                    <div className="pt-6 mt-auto">
+                      <Link href={`/blog/${post.slug}`} className="inline-flex items-center space-x-4 text-[#cc4e00] group/link">
+                        <span className="text-[10px] font-black uppercase tracking-[0.3em] border-b border-[#cc4e00]/30 group-hover/link:border-[#cc4e00] transition-colors">Read Article</span>
+                        <ArrowUpRight className="w-4 h-4 group-hover/link:translate-x-1 group-hover/link:-translate-y-1 transition-transform" />
+                      </Link>
+                    </div>
                   </div>
-                </div>
-              </motion.article>
-            ))}
+                </motion.article>
+              ))
+            ) : (
+              <div className="col-span-full py-20 text-center border border-dashed border-white/10">
+                <p className="text-white/40 font-light uppercase tracking-widest text-sm">No insights published yet.</p>
+              </div>
+            )}
           </div>
 
           {/* Newsletter / CTA Section */}

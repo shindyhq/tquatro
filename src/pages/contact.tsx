@@ -1,4 +1,4 @@
-﻿import Head from "next/head";
+import Head from "next/head";
 import React from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Navbar } from "@/components/layout/Navbar";
@@ -7,13 +7,36 @@ import { Container } from "@/components/ui/Container";
 import { ArrowUpRight, Mail, MapPin, Phone, Globe, Send, MessageSquare } from "lucide-react";
 
 export default function Contact() {
-  const [formStatus, setFormStatus] = React.useState<'idle' | 'sending' | 'success'>('idle');
+  const [formStatus, setFormStatus] = React.useState<'idle' | 'sending' | 'success' | 'error'>('idle');
+  const [formData, setFormData] = React.useState({
+    fullName: '',
+    email: '',
+    organization: '',
+    subject: 'Operational Overhaul',
+    message: ''
+  });
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setFormStatus('sending');
-    // Simulate API call
-    setTimeout(() => setFormStatus('success'), 2000);
+    
+    try {
+      // Connect to our WordPress bridge
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        setFormStatus('success');
+      } else {
+        setFormStatus('error');
+      }
+    } catch (error) {
+      console.error("Submission error:", error);
+      setFormStatus('error');
+    }
   };
 
   return (
@@ -139,6 +162,8 @@ export default function Contact() {
                                   className="w-full bg-transparent border-b border-white/10 py-4 text-white text-xl font-light focus:outline-none focus:border-[#cc4e00] transition-all placeholder:text-white/5" 
                                   placeholder="John Doe"
                                   required
+                                  value={formData.fullName}
+                                  onChange={(e) => setFormData({...formData, fullName: e.target.value})}
                                 />
                              </div>
                              <div className="space-y-4 group/input">
@@ -148,6 +173,8 @@ export default function Contact() {
                                   className="w-full bg-transparent border-b border-white/10 py-4 text-white text-xl font-light focus:outline-none focus:border-[#cc4e00] transition-all placeholder:text-white/5" 
                                   placeholder="john@company.com"
                                   required
+                                  value={formData.email}
+                                  onChange={(e) => setFormData({...formData, email: e.target.value})}
                                 />
                              </div>
                           </div>
@@ -160,15 +187,21 @@ export default function Contact() {
                                   className="w-full bg-transparent border-b border-white/10 py-4 text-white text-xl font-light focus:outline-none focus:border-[#cc4e00] transition-all placeholder:text-white/5" 
                                   placeholder="Company Name"
                                   required
+                                  value={formData.organization}
+                                  onChange={(e) => setFormData({...formData, organization: e.target.value})}
                                 />
                              </div>
                              <div className="space-y-4 group/input">
                                 <label className="text-[10px] font-black uppercase tracking-[0.4em] text-white/30 group-focus-within/input:text-[#cc4e00] transition-colors">Subject Area</label>
-                                <select className="w-full bg-transparent border-b border-white/10 py-4 text-white text-xl font-light focus:outline-none focus:border-[#cc4e00] transition-all appearance-none cursor-pointer">
-                                   <option className="bg-[#010b2b]">Operational Overhaul</option>
-                                   <option className="bg-[#010b2b]">Marketplace Growth</option>
-                                   <option className="bg-[#010b2b]">Supply Chain Optimization</option>
-                                   <option className="bg-[#010b2b]">Other Inquiry</option>
+                                <select 
+                                   className="w-full bg-transparent border-b border-white/10 py-4 text-white text-xl font-light focus:outline-none focus:border-[#cc4e00] transition-all appearance-none cursor-pointer"
+                                   value={formData.subject}
+                                   onChange={(e) => setFormData({...formData, subject: e.target.value})}
+                                >
+                                   <option className="bg-[#010b2b]" value="Operational Overhaul">Operational Overhaul</option>
+                                   <option className="bg-[#010b2b]" value="Marketplace Growth">Marketplace Growth</option>
+                                   <option className="bg-[#010b2b]" value="Supply Chain Optimization">Supply Chain Optimization</option>
+                                   <option className="bg-[#010b2b]" value="Other Inquiry">Other Inquiry</option>
                                 </select>
                              </div>
                           </div>
@@ -180,6 +213,8 @@ export default function Contact() {
                                className="w-full bg-transparent border-b border-white/10 py-4 text-white text-xl font-light focus:outline-none focus:border-[#cc4e00] transition-all resize-none placeholder:text-white/5" 
                                placeholder="Briefly describe the bottleneck..."
                                required
+                               value={formData.message}
+                               onChange={(e) => setFormData({...formData, message: e.target.value})}
                              />
                           </div>
 
@@ -190,7 +225,9 @@ export default function Contact() {
                                whileHover={{ scale: 1.02 }}
                                whileTap={{ scale: 0.98 }}
                                className={`px-16 py-8 font-black uppercase text-sm tracking-[0.3em] flex items-center gap-6 transition-all duration-500 overflow-hidden relative ${
-                                 formStatus === 'success' ? 'bg-green-600 text-white' : 'bg-[#cc4e00] text-white'
+                                 formStatus === 'success' ? 'bg-green-600 text-white' : 
+                                 formStatus === 'error' ? 'bg-red-600 text-white' : 
+                                 'bg-[#cc4e00] text-white'
                                }`}
                              >
                                 <AnimatePresence mode="wait">
