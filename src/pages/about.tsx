@@ -11,27 +11,27 @@ import Image from "next/image";
 const philosophyItems = [
   {
     id: "01",
-    title: "Execution > Advice",
-    icon: <Zap className="w-6 h-6" />,
-    desc: "Strategy is useless without the ability to implement. We live in the details of the execution layer."
+    title: "Transparency",
+    icon: <Users className="w-6 h-6" />,
+    desc: "We say what we mean — including things that are uncomfortable to hear. Honest information leads to better decisions."
   },
   {
     id: "02",
-    title: "Data Integrity",
-    icon: <ShieldCheck className="w-6 h-6" />,
-    desc: "Clean data is the foundation of every confident decision. We prioritize visibility over assumptions."
+    title: "Transformation",
+    icon: <Zap className="w-6 h-6" />,
+    desc: "Our job isn't to produce reports — it's to shift the trajectory of your business and outcomes."
   },
   {
     id: "03",
-    title: "Operational Speed",
+    title: "Tenacity",
     icon: <Target className="w-6 h-6" />,
-    desc: "The digital marketplace moves faster than most boards. We build systems for rapid response."
+    desc: "Implementation is difficult. It's where most hand off a document and leave. We stay and troubleshoot."
   },
   {
     id: "04",
-    title: "Partnership First",
-    icon: <Users className="w-6 h-6" />,
-    desc: "We aren't a vendor. We are an extension of your operational staff, focused on long-term stability."
+    title: "Tailored",
+    icon: <ShieldCheck className="w-6 h-6" />,
+    desc: "Your business has unique constraints. We start with discovery, not template-based assumptions."
   }
 ];
 

@@ -12,25 +12,25 @@ const steps = [
     num: '01', 
     title: 'Discovery', 
     tag: 'Tailored', 
-    desc: "We start by listening. A thorough look at your business, your goals, and the specific challenges standing between where you are and where you want to be. No assumptions, no templates." 
+    desc: "We start by listening. A thorough look at your business, your goals, and the specific challenges standing between where you are and where you want to be. No assumptions, no templates — just honest assessment built around your actual situation." 
   },
   { 
     num: '02', 
     title: 'Strategy', 
     tag: 'Transparency', 
-    desc: "Based on what we learn, we develop a focused plan — and we walk you through it plainly. Not a 50-page deck full of ideas, but a clear, prioritized roadmap." 
+    desc: "Based on what we learn, we develop a focused plan — and we walk you through it plainly. Not a 50-page deck full of ideas, but a clear, prioritized roadmap. We'll also tell you directly what won't work and why, before resources are wasted on it." 
   },
   { 
     num: '03', 
     title: 'Execution', 
     tag: 'Tenacity', 
-    desc: "This is where most consultancies stop. We don't. We stay involved through implementation — whether managing marketplace integrations, launching SEO, or restructuring operations." 
+    desc: "This is where most consultancies stop. We don't. We stay involved through implementation — whether managing marketplace integrations, launching an SEO campaign, or restructuring your operations. We push through the difficult parts, not around them." 
   },
   { 
     num: '04', 
     title: 'Measure & Optimize', 
     tag: 'Transformation', 
-    desc: "We track what matters, report honestly, and adjust when needed. At every stage, the question we're asking is simple: is this business in a better position than before?" 
+    desc: "We track what matters, report honestly, and adjust when needed. Growth isn't linear, and we don't pretend it is. At every stage, the question we're asking is simple: is this business in a better position than before we started?" 
   },
 ];
 
@@ -43,7 +43,7 @@ const cardVariants = {
       delay: i * 0.1,
       duration: 0.8,
       ease: [0.16, 1, 0.3, 1]
-    }
+    } as any
   })
 };
 
