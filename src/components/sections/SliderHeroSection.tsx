@@ -10,9 +10,9 @@ const slides = [
   {
     id: 1,
     image: 'https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&dpr=2',
-    line1: 'COMMERCE IS',
-    line2: 'EVOLVING.',
-    subtitle: 'Bridging the gap between theory and deep channel execution in a modern retail landscape.',
+    line1: 'DIGITAL RETAIL',
+    line2: 'REDEFINED.',
+    subtitle: 'Bridging the massive execution gap between high-level consultancy theory and the deep, complex realities of cross-border channel operations.',
     ctaLabel: 'See Our Process',
     ctaHref: '/#how-we-work',
     pattern: 'mesh',
@@ -20,9 +20,9 @@ const slides = [
   {
     id: 2,
     image: 'https://images.pexels.com/photos/1181467/pexels-photo-1181467.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&dpr=2',
-    line1: 'UNCOMPROMISING',
-    line2: 'STRATEGY.',
-    subtitle: 'Data-driven operations that impact the bottom line across every digital marketplace.',
+    line1: 'MARKETPLACE',
+    line2: 'DOMINANCE.',
+    subtitle: 'Deploying uncompromising, data-driven operational frameworks that deliver immediate and sustained impact to the bottom line across global marketplaces.',
     ctaLabel: 'View Services',
     ctaHref: '/services',
     pattern: 'dots',
@@ -30,9 +30,9 @@ const slides = [
   {
     id: 3,
     image: 'https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&dpr=2',
-    line1: 'OPERATORS',
-    line2: 'FIRST.',
-    subtitle: 'Real-world expertise from specialists who have managed multi-million dollar brands.',
+    line1: 'OPERATIONAL',
+    line2: 'EXCELLENCE.',
+    subtitle: 'Leveraging real-world expertise from senior practitioners who have successfully managed and scaled multi-million dollar global retail portfolios.',
     ctaLabel: 'About Us',
     ctaHref: '/about',
     pattern: 'grid',
@@ -40,9 +40,9 @@ const slides = [
   {
     id: 4,
     image: 'https://images.pexels.com/photos/3184418/pexels-photo-3184418.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&dpr=2',
-    line1: 'FUTURE',
-    line2: 'RETAIL.',
-    subtitle: 'A premium operations-led consultancy helping brands bridge the gap from strategy to deep execution.',
+    line1: 'STRATEGIC',
+    line2: 'EXECUTION.',
+    subtitle: 'A premium operations-led consultancy specifically engineered to help ambitious brands navigate the full lifecycle from strategy to deep channel execution.',
     ctaLabel: 'Get Started',
     ctaHref: '/contact',
     pattern: 'mesh',
@@ -219,7 +219,7 @@ export const SliderHeroSection = () => {
                   <div>
                     <motion.span 
                       variants={wordVariants}
-                      className="block font-black text-[clamp(2.5rem,8.5vw,9.5rem)] leading-[0.8] tracking-tighter uppercase text-white"
+                      className="block font-black text-[clamp(2.5rem,7vw,8rem)] leading-[0.8] tracking-tighter uppercase text-white"
                     >
                       {currentSlide.line1}
                     </motion.span>
@@ -227,7 +227,7 @@ export const SliderHeroSection = () => {
                   <div className="relative">
                     <motion.span 
                       variants={wordVariants}
-                      className="block font-black text-[clamp(2.5rem,8.5vw,9.5rem)] leading-[0.8] tracking-tighter uppercase text-[#cc4e00]"
+                      className="block font-black text-[clamp(2.5rem,7vw,8rem)] leading-[0.8] tracking-tighter uppercase text-[#cc4e00]"
                       style={{ 
                         WebkitTextStroke: '2px #cc4e00',
                         color: 'transparent'
