@@ -33,9 +33,10 @@ export const Navbar = () => {
     <header 
       className={cn(
         "fixed top-0 w-full z-50 transition-all duration-500",
+        // Mobile: always dark. Desktop: transparent at top, dark on scroll
         scrolled 
           ? "bg-[#010b2b]/95 backdrop-blur-md py-4 border-b border-white/10" 
-          : "bg-transparent py-8"
+          : "bg-[#010b2b] lg:bg-transparent py-6 lg:py-8"
       )}
     >
       <Container>
@@ -91,7 +92,7 @@ export const Navbar = () => {
 
           {/* Mobile Toggle */}
           <button
-            className="lg:hidden p-2 text-white"
+            className="lg:hidden p-2 text-white rounded-sm transition-colors duration-200 hover:text-[#cc4e00]"
             onClick={() => setIsOpen(!isOpen)}
             aria-label="Toggle menu"
           >
