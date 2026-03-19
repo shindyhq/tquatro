@@ -1,4 +1,4 @@
-﻿import React, { useState, useEffect, useCallback, useRef } from 'react';
+import React, { useState, useEffect, useCallback, useRef } from 'react';
 import { motion, AnimatePresence, type Variants, useScroll, useTransform } from 'framer-motion';
 import { ArrowRight, ChevronLeft, ChevronRight, Play, Pause, MoveUpRight } from 'lucide-react';
 import Link from 'next/link';
@@ -36,6 +36,16 @@ const slides = [
     ctaLabel: 'About Us',
     ctaHref: '/about',
     pattern: 'grid',
+  },
+  {
+    id: 4,
+    image: 'https://images.pexels.com/photos/3184418/pexels-photo-3184418.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&dpr=2',
+    line1: 'FUTURE',
+    line2: 'RETAIL.',
+    subtitle: 'A premium operations-led consultancy helping brands bridge the gap from strategy to deep execution.',
+    ctaLabel: 'Get Started',
+    ctaHref: '/contact',
+    pattern: 'mesh',
   },
 ];
 
