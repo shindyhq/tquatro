@@ -2,18 +2,18 @@ import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { useRouter } from 'next/router';
-import { Menu, X, ArrowRight } from 'lucide-react';
+import { Menu, X, ArrowRight, Home, Box, Factory, Info, BookOpen, Send } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { Container } from '../ui/Container';
 import { Button } from '../ui/Button';
 
 const links = [
-  { label: 'Home', href: '/' },
-  { label: 'Services', href: '/services' },
-  { label: 'Industries', href: '/industries' },
-  { label: 'About', href: '/about' },
-  { label: 'Blog', href: '/blog' },
-  { label: 'Contact', href: '/contact' },
+  { label: 'Home', href: '/', icon: Home },
+  { label: 'Services', href: '/services', icon: Box },
+  { label: 'Industries', href: '/industries', icon: Factory },
+  { label: 'About', href: '/about', icon: Info },
+  { label: 'Blog', href: '/blog', icon: BookOpen },
+  { label: 'Contact', href: '/contact', icon: Send },
 ];
 
 export const Navbar = () => {
@@ -104,22 +104,26 @@ export const Navbar = () => {
         "lg:hidden fixed inset-0 top-0 left-0 w-full h-screen bg-[#010b2b] z-[-1] transition-all duration-700 ease-[0.16,1,0.3,1] flex flex-col items-center justify-center p-8",
         isOpen ? "translate-y-0 opacity-100" : "-translate-y-full opacity-0"
       )}>
-        <div className="flex flex-col items-center gap-8 w-full">
+        <div className="flex flex-col items-center gap-6 w-full max-w-sm">
           {links.map((link, i) => (
             <Link
               key={link.href}
               href={link.href}
               className={cn(
-                "text-3xl font-black tracking-tighter uppercase transition-colors",
+                "w-full flex items-center justify-between text-2xl font-black tracking-tighter uppercase transition-colors py-4 border-b border-white/5",
                 router.pathname === link.href ? "text-[#cc4e00]" : "text-white hover:text-[#cc4e00]"
               )}
               onClick={() => setIsOpen(false)}
             >
-              {link.label}
+              <span className="flex items-center gap-4">
+                <link.icon className={cn("w-6 h-6", router.pathname === link.href ? "text-[#cc4e00]" : "text-white/20")} />
+                {link.label}
+              </span>
+              <ArrowRight className="w-5 h-5 opacity-20" />
             </Link>
           ))}
-          <Link href="/contact" className="w-full max-w-xs mt-8" onClick={() => setIsOpen(false)}>
-            <Button className="w-full bg-[#cc4e00] text-white h-16 font-black uppercase tracking-widest text-sm">
+          <Link href="/contact" className="w-full mt-8" onClick={() => setIsOpen(false)}>
+            <Button className="w-full bg-[#cc4e00] text-white h-16 font-black uppercase tracking-widest text-sm shadow-xl shadow-[#cc4e00]/20">
               Let&apos;s Talk <ArrowRight className="ml-4 h-5 w-5" />
             </Button>
           </Link>
