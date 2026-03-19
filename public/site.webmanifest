@@ -1,0 +1,21 @@
+{
+  "name": "T-QUATRO LLC",
+  "short_name": "T-QUATRO",
+  "description": "Online Retail Consultancy — Strategy, Systems, and Hands-on Execution.",
+  "icons": [
+    {
+      "src": "/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "theme_color": "#010b2b",
+  "background_color": "#010b2b",
+  "display": "standalone",
+  "start_url": "/"
+}
