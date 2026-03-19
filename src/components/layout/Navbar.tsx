@@ -50,15 +50,12 @@ export const Navbar = () => {
                 className="object-contain"
               />
             </div>
-            <div className="flex flex-col -space-y-1.5 pt-1">
+            <div className="flex flex-col pt-1">
               <span className={cn(
                 "text-3xl font-black tracking-tighter uppercase transition-colors duration-500",
                 scrolled ? "text-white" : "text-white"
               )}>
                 T-QUATRO <span className="text-[#cc4e00]">LLC</span>
-              </span>
-              <span className="text-[9px] font-black uppercase tracking-[0.54em] text-[#cc4e00] opacity-90 leading-none whitespace-nowrap">
-                Online Retail Consultancy
               </span>
             </div>
           </Link>
