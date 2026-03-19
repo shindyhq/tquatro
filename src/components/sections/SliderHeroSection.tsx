@@ -215,7 +215,7 @@ export const SliderHeroSection = () => {
                 className="flex flex-col space-y-10"
               >
                 {/* Massive Editorial Header */}
-                <div className="flex flex-col -space-y-4 md:-space-y-8">
+                <div className="flex flex-col -space-y-4 md:-space-y-6">
                   <div className="overflow-hidden">
                     <motion.span 
                       variants={wordVariants}
@@ -227,7 +227,7 @@ export const SliderHeroSection = () => {
                   <div className="overflow-hidden">
                     <motion.span 
                       variants={wordVariants}
-                      className="block font-black text-[clamp(3.5rem,10vw,10rem)] leading-[0.9] tracking-tighter uppercase text-[#cc4e00]"
+                      className="block font-black text-[clamp(2.5rem,8.5vw,9.5rem)] leading-[0.9] tracking-tighter uppercase text-[#cc4e00]"
                     >
                       {currentSlide.line2}
                     </motion.span>
