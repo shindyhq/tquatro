@@ -1,4 +1,4 @@
-﻿import React from 'react';
+import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
@@ -62,7 +62,7 @@ export const Footer = () => {
                     <span className="text-4xl font-black tracking-tighter uppercase text-white transition-colors duration-500 group-hover:text-[#cc4e00]">
                       T-QUATRO <span className="text-[#cc4e00]">LLC</span>
                     </span>
-                    <span className="text-xs font-black uppercase tracking-[0.3em] text-[#cc4e00]/80">
+                    <span className="text-[10px] font-black uppercase tracking-[0.54em] text-[#cc4e00]/80 leading-none whitespace-nowrap">
                       Online Retail Consultancy
                     </span>
                   </div>

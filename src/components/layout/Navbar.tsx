@@ -1,4 +1,4 @@
-﻿import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { useRouter } from 'next/router';
@@ -57,7 +57,7 @@ export const Navbar = () => {
               )}>
                 T-QUATRO <span className="text-[#cc4e00]">LLC</span>
               </span>
-              <span className="text-[11px] font-black uppercase tracking-[0.4em] text-[#cc4e00] opacity-90">
+              <span className="text-[9px] font-black uppercase tracking-[0.54em] text-[#cc4e00] opacity-90 leading-none whitespace-nowrap">
                 Online Retail Consultancy
               </span>
             </div>
