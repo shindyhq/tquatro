@@ -1,0 +1,92 @@
+# PAGE 3: SERVICES
+
+---
+
+## 🔵 NAV BAR
+
+**Logo:** T-QUATRO LLC
+**Links:** Home | Services | Industries | About | Blog | Contact
+**CTA Button:** Let's Talk →
+
+---
+
+## 🔵 SERVICES HERO
+
+**Eyebrow:** Our Expertise
+**Headline:**
+# Modular solutions.
+# Compound results.
+
+**Subheadline:**
+Whether you need a single specialized service or a full-stack operational overhaul, we deliver the expertise and execution to move your business forward.
+
+---
+
+## 🔵 CORE SERVICE LINES
+
+### 01 — E-Commerce Brokerage
+Strategic positioning and channel management to expand your reach.
+- Marketplace strategy (Amazon, Walmart, eBay)
+- Account health & compliance
+- Platform expansion planning
+- Brand registry management
+
+### 02 — Marketplace Integrations
+Unified infrastructure for multi-channel commerce.
+- Inventory & order synchronization
+- API & middleware implementation
+- ERP/IMS connectivity
+- Data health & mapping
+
+### 03 — Product Sourcing
+Building resilient and profitable supply chains.
+- Supplier discovery & vetting
+- Quality control frameworks
+- Logistics & landed cost optimization
+- Contract negotiation support
+
+### 04 — Product Development
+From concept validation to profitable launch.
+- Market research & competitive analysis
+- Sourcing-aligned design
+- Packaging & branding strategy
+- GTM (Go-To-Market) planning
+
+### 05 — Business Turnaround
+Operational restoration when things aren't working.
+- Root cause diagnosis
+- Cash flow & margin stabilization
+- Operational restructuring
+- Performance recovery roadmap
+
+### 06 — Bookkeeping
+Clean data for confident decision-making.
+- Monthly reconciliation
+- P&L and Balance Sheet reporting
+- Accounts Payable/Receivable
+- Decision-ready financial snapshots
+
+### 07 — SEO Services
+Sustainable visibility that you own.
+- Technical SEO audits
+- On-page & content optimization
+- Authority building (backlink strategy)
+- E-commerce specific keyword growth
+
+### 08 — Media & Publications
+Authority-driven content strategy.
+- Editorial calendar development
+- Brand-owned media channels
+- Newsletter & audience growth
+- Thought leadership positioning
+
+---
+
+## 🔵 SERVICES PAGE CTA
+
+### Not sure where to start?
+
+Most of our clients start with a specific problem and expand from there. Let's look at your current situation and see which lever will move the needle fastest.
+
+**Primary CTA:** Get an Assessment →
+**Secondary CTA:** See Industry Expertise

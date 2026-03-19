@@ -1,0 +1,23 @@
+
+FONTS
+Outfit Fonts - All Variants.
+BLOCK LETTERS FOR ALL HEADINGS
+DUAL COLOR TEXT FOR THE HEADINGS 
+
+COLORS
+
+Light Mode:
+
+Primary: #000000
+Secondary: #010b2bff
+Accent: #cc4e00ff
+Background: #FFFFFF
+Text: #0c0c0cff
+
+Dark Mode:
+
+Primary: #010b2bff
+Secondary: #E5E5E5
+Accent: #cc4e00ff
+Background: #010b2bff
+Text: #F2F2F2

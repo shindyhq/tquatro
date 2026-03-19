@@ -1,0 +1,63 @@
+# PAGE 2: ABOUT US
+
+---
+
+## 🔵 NAV BAR
+
+**Logo:** T-QUATRO LLC
+**Links:** Home | Services | Industries | About | Blog | Contact
+**CTA Button:** Let's Talk →
+
+---
+
+## 🔵 ABOUT HERO
+
+**Headline:**
+# Operators first.
+# Consultants second.
+
+**Subheadline:**
+We didn't learn business in a classroom or a boardroom. We learned it on the floor, in the warehouse, and behind the dashboard. T-QUATRO LLC is an operationally-led consultancy for brands that need more than just advice — they need a partner who knows how to execute.
+
+---
+
+## 🔵 OUR PHILOSOPHY (The Four T's)
+
+**Section Tag:** The Standards
+
+Everything we do is grounded in four qualities we call the Four T's. They're not marketing language — they're the standards we hold ourselves to in every client engagement.
+
+**Transparency — We tell the truth.**
+We share what we actually think, even when it's not what a client wants to hear. Honest information leads to better decisions, and better decisions lead to better outcomes. We'd rather have a difficult conversation early than a bigger problem later.
+
+**Transformation — We're here to change things.**
+Our job isn't to produce reports — it's to shift the trajectory of your business. Every recommendation, every project, every engagement is designed with one question in mind: what will be meaningfully different because of this work?
+
+**Tenacity — We don't walk away.**
+Implementation is where things get difficult. It's where most consultants hand off a document and leave. We stay. We troubleshoot, we iterate, and we stay focused on the objective until it's reached.
+
+**Tailored — We build for you, not a template.**
+Your business has unique constraints, culture, and competitive advantages. We start with discovery, not assumptions. What we build for you is specific to your growth path, not a generic best practice.
+
+---
+
+## 🔵 THE STORY / MISSION
+
+**Section Tag:** Our Story
+
+### Built for the gap.
+
+T-QUATRO LLC was founded to close the gap between high-level strategy and day-to-day execution. In the digital marketplace, those two things can't be separated. You can't have a growth strategy that doesn't account for supply chain reality, and you can't have operations that don't support your brand promise.
+
+We bring those worlds together. Based in Dallas, TX, we serve a national roster of clients who value expertise that has been tested in the real world.
+
+---
+
+## 🔵 ABOUT PAGE CTA
+
+### Find out if we're what you're looking for.
+
+No high-pressure sales. Just an honest conversation about your business and where you want to take it.
+
+**Primary CTA:** Start the Conversation →
+**Secondary CTA:** View Our Services

@@ -1,0 +1,51 @@
+# PAGE 4: INDUSTRIES
+
+---
+
+## 🔵 NAV BAR
+
+**Logo:** T-QUATRO LLC
+**Links:** Home | Services | Industries | About | Blog | Contact
+**CTA Button:** Let's Talk →
+
+---
+
+## 🔵 INDUSTRIES HERO
+
+**Eyebrow:** Where We Focus
+**Headline:**
+# Deep expertise where 
+# commerce meets digital.
+
+**Subheadline:**
+We don't try to be everything to everyone. We focus on the sectors where our background in operations, data, and digital strategy can have the most immediate impact.
+
+---
+
+## 🔵 SECTOR FOCUS
+
+### 🛒 E-Commerce
+From start-up launches to scaling established storefronts, we understand the nuances of the global digital marketplace. We help you navigate platform changes, protect your margins, and grow your footprint.
+
+### 🏪 Retail & Omnichannel
+The line between physical and digital is gone. we help traditional retailers build the digital bridges they need to stay relevant, and help digital brands find their footing in physical spaces.
+
+### 📱 Social Commerce
+The next generation of commerce happens in the feed. We help brands position themselves for TikTok Shop, Instagram Commerce, and the creator-led economy with strategies that convert content into customers.
+
+### 🚚 Supply Chain & Fulfillment
+The un-glamorous part of business that determines whether you're profitable. We bring rigor to your sourcing, forecasting, and fulfillment operations so your back-end supports your front-end growth.
+
+### 📰 Media & Publications
+In a crowded market, attention is the new currency. We help brands build authority through owned media, newsletters, and content that turned "customers" into an audience.
+
+---
+
+## 🔵 INDUSTRIES PAGE CTA
+
+### Do we understand your space?
+
+Chances are, we do. More importantly, we're quick learners who value data over assumptions. Let's talk about the specific challenges in your industry.
+
+**Primary CTA:** Start the Conversation →
+**Secondary CTA:** View All Services
