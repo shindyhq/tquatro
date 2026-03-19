@@ -38,7 +38,7 @@ export const SocialProof = () => {
       <div className="absolute bottom-0 right-0 w-64 h-64 bg-[#cc4e00]/5 blur-[100px] pointer-events-none" />
 
       <Container>
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-24 lg:gap-32">
+        <div className="grid grid-cols-1 lg:grid-cols-10 gap-32 lg:gap-40 items-start">
           
           {/* Left: Section Header */}
           <div className="lg:col-span-4">
@@ -66,7 +66,7 @@ export const SocialProof = () => {
           </div>
 
           {/* Right: Testimonial Grid */}
-          <div className="lg:col-span-8 grid grid-cols-1 md:grid-cols-2 gap-px bg-white/10 border border-white/5 overflow-hidden">
+          <div className="lg:col-span-6 grid grid-cols-1 md:grid-cols-2 gap-px bg-white/10 border border-white/5 overflow-hidden">
             {testimonials.map((t, i) => (
               <motion.div
                 key={i}
