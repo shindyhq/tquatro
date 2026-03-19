@@ -15,7 +15,6 @@ const blogPosts = [
     excerpt: "Success in the digital marketplace doesn't come from 50-page slide decks. It comes from the ability to turn high-level vision into warehouse-level reality.",
     category: "Strategy",
     author: "T-QUATRO Editorial",
-    date: "March 15, 2026",
     readTime: "6 min read",
     image: "https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg?auto=compress&cs=tinysrgb&w=800",
     slug: "strategy-execution-gap"
@@ -26,7 +25,6 @@ const blogPosts = [
     excerpt: "The line between physical and digital storefronts has dissolved. If your supply chain doesn't reflect that, you're losing margin every single day.",
     category: "Operations",
     author: "T-QUATRO Editorial",
-    date: "March 10, 2026",
     readTime: "8 min read",
     image: "https://images.pexels.com/photos/4483610/pexels-photo-4483610.jpeg?auto=compress&cs=tinysrgb&w=800",
     slug: "integrated-commerce-future"
@@ -37,7 +35,6 @@ const blogPosts = [
     excerpt: "Predictability is the new competitive advantage. How leading brands are restructuring their fulfillment to survive global marketplace volatility.",
     category: "Supply Chain",
     author: "T-QUATRO Editorial",
-    date: "March 05, 2026",
     readTime: "5 min read",
     image: "https://images.pexels.com/photos/6169033/pexels-photo-6169033.jpeg?auto=compress&cs=tinysrgb&w=800",
     slug: "supply-chain-resilience"
@@ -141,8 +138,8 @@ export default function Blog() {
                 <div className="p-10 flex flex-col flex-grow space-y-6">
                   <div className="flex items-center space-x-6 text-[10px] font-black uppercase tracking-widest text-white/30">
                     <div className="flex items-center">
-                      <Calendar className="w-3 h-3 mr-2 text-[#cc4e00]" />
-                      {post.date}
+                      <Tag className="w-3 h-3 mr-2 text-[#cc4e00]" />
+                      Knowledge Share
                     </div>
                     <div className="flex items-center">
                       <Clock className="w-3 h-3 mr-2 text-[#cc4e00]" />
