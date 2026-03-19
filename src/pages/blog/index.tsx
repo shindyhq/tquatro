@@ -9,19 +9,44 @@ import Link from "next/link";
 import Image from "next/image";
 import { getAllPosts } from "@/lib/wordpress";
 
+// Mock Data to keep the UI populated until WP is ready
+const mockPosts = [
+  {
+    slug: "strategy-execution-gap",
+    title: "The Strategy-Execution Gap: Why Most Consultancy Advice Fails",
+    excerpt: "Success in the digital marketplace doesn't come from 50-page slide decks. It comes from the ability to turn high-level vision into warehouse-level reality.",
+    featuredImage: { node: { sourceUrl: "https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg?auto=compress&cs=tinysrgb&w=800" } },
+    categories: { nodes: [{ name: "Strategy" }] }
+  },
+  {
+    slug: "integrated-commerce-future",
+    title: "Omnichannel is Dead. Long Live Integrated Commerce.",
+    excerpt: "The line between physical and digital storefronts has dissolved. If your supply chain doesn't reflect that, you're losing margin every single day.",
+    featuredImage: { node: { sourceUrl: "https://images.pexels.com/photos/4483610/pexels-photo-4483610.jpeg?auto=compress&cs=tinysrgb&w=800" } },
+    categories: { nodes: [{ name: "Operations" }] }
+  },
+  {
+    slug: "supply-chain-resilience",
+    title: "Supply Chain Resilience: More Than Just a Buzzword",
+    excerpt: "Predictability is the new competitive advantage. How leading brands are restructuring their fulfillment to survive global marketplace volatility.",
+    featuredImage: { node: { sourceUrl: "https://images.pexels.com/photos/6169033/pexels-photo-6169033.jpeg?auto=compress&cs=tinysrgb&w=800" } },
+    categories: { nodes: [{ name: "Supply Chain" }] }
+  }
+];
+
 export async function getServerSideProps() {
   try {
     const posts = await getAllPosts();
     return {
       props: {
-        posts: posts || [],
+        posts: posts && posts.length > 0 ? posts : mockPosts,
       },
     };
   } catch (error) {
-    console.error("Error fetching posts:", error);
+    console.error("Error fetching posts, using mocks:", error);
     return {
       props: {
-        posts: [],
+        posts: mockPosts,
       },
     };
   }
