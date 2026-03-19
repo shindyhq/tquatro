@@ -9,6 +9,9 @@ import Link from "next/link";
 import Image from "next/image";
 import { getAllPosts } from "@/lib/wordpress";
 
+// Master categories list to ensure UI presence even if data is missing
+const MASTER_CATEGORIES = ["All", "Strategy", "Operations", "Supply Chain", "Media", "Digital"];
+
 // Mock Data to keep the UI populated until WP is ready
 const mockPosts = [
   {
@@ -55,7 +58,9 @@ export async function getServerSideProps() {
 export default function Blog({ posts }: { posts: any[] }) {
   const [activeCategory, setActiveCategory] = React.useState("All");
 
-  const categories = ["All", ...new Set(posts?.flatMap(post => post.categories.nodes.map((n: any) => n.name)) || [])];
+  // Merge Master Category list with dynamic categories from WP posts
+  const dynamicCategories = posts?.flatMap(post => post.categories.nodes.map((n: any) => n.name)) || [];
+  const categories = [...new Set([...MASTER_CATEGORIES, ...dynamicCategories])];
 
   const filteredPosts = activeCategory === "All" 
     ? posts 
